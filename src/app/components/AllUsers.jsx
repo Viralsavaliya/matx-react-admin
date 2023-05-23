@@ -13,11 +13,10 @@ import {
 
 
 import axios from "axios";
-import { useFormik } from "formik";
 import { enqueueSnackbar } from "notistack";
 import React, { useEffect, useState } from "react";
-import { useMutation } from "react-query";
-import * as yup from "yup";
+
+import {  useNavigate } from 'react-router-dom';
 
 
 
@@ -27,6 +26,7 @@ function AllUSers() {
   const [user, setuser] = useState([]);
   const [update, setupdate] = useState();
   const [totalrecord, settotalrecord] = useState("");
+  const navigate = useNavigate();
 
 
   const token = localStorage.getItem('token');
@@ -64,6 +64,18 @@ function AllUSers() {
         console.log(response.data);
         getuser();
       })
+  }
+
+  const viewuser = (row) => {
+    // console.log(row);
+    const rowid = row._id;
+    navigate('/viewuser',{state:rowid})
+    // axios.get(`http://localhost:3000/admin/viewuser?id=${row._id}`)
+    // .then((response) => {
+    //   console.log(response.data);
+    //   const statusdata = response.data
+      // console.log("navigate");  
+    // })
   }
 
 
@@ -151,6 +163,15 @@ function AllUSers() {
             >
               status
             </TableCell>
+            <TableCell
+              style={{
+                fontSize: 22,
+                color: "rgb(38 28 26 / 87%)",
+              }}
+              align="left"
+            >
+              View
+            </TableCell>
 
           </TableRow>
         </TableHead>
@@ -168,6 +189,7 @@ function AllUSers() {
                 <img
                   src={"http://localhost:3000/" + row?.image}
                   height="70px"
+                  width="100px"
                   alt="image"
                   srcset=""
                 />
@@ -188,6 +210,17 @@ function AllUSers() {
                   onClick={() => handleClick(row)}
                 >
                   {row?.status === true ? "Active" : "Inactive"}
+                </Button>
+              </TableCell>
+              <TableCell align="left" >
+                <Button
+                  style={{ margin: "0 0 0 0px", width: "100px" }}
+                  color="primary"
+                  variant="filled"
+                  type="submit"
+                  onClick={() => viewuser(row)}
+                >
+                  View
                 </Button>
               </TableCell>
 

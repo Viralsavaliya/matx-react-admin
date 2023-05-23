@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import Loadable from 'app/components/Loadable';
 import AllUsers from 'app/components/AllUsers';
+import ViewUser from 'app/components/ViewUser';
 
 // const AppTable = Loadable(lazy(() => import('./tables/AppTable')));
 // const AppForm = Loadable(lazy(() => import('./forms/AppForm')));
@@ -18,7 +19,8 @@ import AllUsers from 'app/components/AllUsers';
 // const AppExpansionPanel = Loadable(lazy(() => import('./expansion-panel/AppExpansionPanel')));
 
 const materialRoutes = [
-  { path: "/user", element: <AllUsers /> }
+  { path: "/user", element: <AllUsers /> },
+  { path: "/viewuser", element: <ViewUser /> }
   // { path: '/material/table', element: <AppTable /> },
   // { path: '/material/form', element: <AppForm /> },
   // { path: '/material/buttons', element: <AppButton /> },
