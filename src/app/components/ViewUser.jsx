@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+    import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
@@ -77,33 +77,6 @@ function ViewUser() {
     margin: "10px",
     // color: theme.palette.text.secondary,
   }));
-
-
-
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  //   setFieldValue("userName", user.userName);
-  //   setFieldValue("age", user.age);
-  //   setFieldValue("mobileNo", user.mobileNo);
-  //   setSelectedValue(user.gender);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  //   setupdate();
-  // };
-
-  // const uploadfile = (e) => {
-  //   let file = e.target.files[0];
-  //   const formData = new FormData();
-  //   formData.append("file", file);
-
-  //   axios
-  //     .post(`http://localhost:3000/api/upload-image`, formData)
-  //     .then((res) => {
-  //       setimage(res.data.data);
-  //       // return setvalue(res.data);
-  //     });
-  // };
 
   const getusers = () => {
     axios.get(`http://localhost:3000/admin/viewuser?id=${location.state}`)

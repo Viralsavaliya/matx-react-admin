@@ -2,6 +2,8 @@ import { lazy } from 'react';
 import Loadable from 'app/components/Loadable';
 import AllUsers from 'app/components/AllUsers';
 import ViewUser from 'app/components/ViewUser';
+import AllPost from 'app/components/AllPost';
+import ViewPost from 'app/components/ViewPost';
 
 // const AppTable = Loadable(lazy(() => import('./tables/AppTable')));
 // const AppForm = Loadable(lazy(() => import('./forms/AppForm')));
@@ -20,7 +22,9 @@ import ViewUser from 'app/components/ViewUser';
 
 const materialRoutes = [
   { path: "/user", element: <AllUsers /> },
-  { path: "/viewuser", element: <ViewUser /> }
+  { path: "/viewuser", element: <ViewUser /> }, 
+  { path: "/viewpost", element: <ViewPost /> }, 
+  { path: "/post", element: <AllPost /> }
   // { path: '/material/table', element: <AppTable /> },
   // { path: '/material/form', element: <AppForm /> },
   // { path: '/material/buttons', element: <AppButton /> },
