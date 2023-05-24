@@ -106,57 +106,8 @@ function ViewPost() {
     }
   }, []);
 
-  // const { mutateAsync: updatestate } = useMutation(async (value) => {
 
-  //   await axios
-  //     .put(`http://localhost:3000/api/update-profile`, value)
-  //     .then((res) => {
-  //       if ({ res: true }) {
-  //         enqueueSnackbar(
-  //           "update user Successfully",
-  //           { variant: "success" },
-  //           { autoHideDuration: 1000 }
-  //         );
-  //         handleClose();
-  //         setupdate();
-  //         getusers();
 
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       if (error.response.status === 422) {
-  //         console.log("axios error");
-  //         enqueueSnackbar(
-  //           "This state already added",
-  //           { variant: "error" },
-  //           { autoHideDuration: 1000 }
-  //         );
-  //       }
-  //     });
-  // });
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     image: "",
-  //     userName: "",
-  //     age: "",
-  //     mobileNo: "",
-  //     gender: "",
-  //     address:""
-  //   },
-  //   validationSchema: validationSchema,
-  //   onSubmit: async (values) => {
-  //     await updatestate({
-  //       image: image,
-  //       userName: values.userName,
-  //       age: values.age,
-  //       mobileNo: values.mobileNo,
-  //       gender: selectedValue,
-  //       address:coordinates
-  //     });
-  //   },
-  // });
-  // const { handleChange, handleSubmit, setFieldValue } = formik;
 
 
 
@@ -191,8 +142,6 @@ function ViewPost() {
           <Grid item xs={8} >
             <Item><b>Title:</b>{user?.title}</Item>
             <Item><b>Discripation:</b><p dangerouslySetInnerHTML={{ __html: user.discripation }} /></Item>
-            {/* <Item><FontAwesomeIcon icon={faPhone} /> &nbsp; {user?.mobileNo}</Item> */}
-          </Grid>
         </Grid>
 
 
