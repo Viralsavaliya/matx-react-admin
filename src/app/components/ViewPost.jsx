@@ -142,6 +142,7 @@ function ViewPost() {
           <Grid item xs={8} >
             <Item><b>Title:</b>{user?.title}</Item>
             <Item><b>Discripation:</b><p dangerouslySetInnerHTML={{ __html: user.discripation }} /></Item>
+          </Grid>
         </Grid>
 
 
