@@ -255,27 +255,7 @@ function AllUSers() {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-      {/* <Dialog
-        open={isDeleteDialogOpen}
-        onClose={() => setIsDeleteDialogOpen(false)}
-      >
-        <DialogTitle>Delete confirmation</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Are you sure you want to delete?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={() => setIsDeleteDialogOpen((row) => setupdate(row))}
-          >
-            Cancel
-          </Button>
-          <Button onClick={() => handleDelete()} color="secondary">
-            Delete
-          </Button>
-        </DialogActions>
-      </Dialog> */}
+      
     </div>
   );
 }
