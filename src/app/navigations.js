@@ -17,8 +17,8 @@ export const navigations = [
     icon: 'favorite',
     badge: { value: '30+', color: 'secondary' },
     children: [
-      { name: 'user', path: '/user', iconText: 'user' },
-      { name: 'post', path: '/post', iconText: 'post' },
+      { name: 'user', path: '/user', icon: 'people' },
+      { name: 'post', path: '/post', icon: 'vrpano' },
      
     ]
   },
