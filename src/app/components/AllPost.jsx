@@ -196,13 +196,20 @@ function AllPost() {
                 {i + 1}
               </TableCell>
               <TableCell align="left">
-                <img
+              {row?.image ?
+                (<img
                   src={"http://localhost:3000/" + row?.image}
-                  height="70px"
-                  width="100px"
-                  alt="image"
-                  srcset=""
-                />
+                  width="100%"
+                  height="30%"
+                  alt=""
+                  srcset="" />)
+                : (<video
+                  src={"http://localhost:3000/" + row?.video}
+                  controls
+                  height="100px"
+                  width="100%"
+                />)
+              }
               </TableCell>
 
               <TableCell align="left">{row?.title}</TableCell>
@@ -285,3 +292,6 @@ function AllPost() {
 }
 
 export default AllPost;
+
+
+
