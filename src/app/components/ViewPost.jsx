@@ -116,26 +116,33 @@ function ViewPost() {
     <div>
       <Container >
         <Grid container spacing={2} style={{ border: "1px solid black", margin: "10px 0 ", borderRadius: "15px", padding: "5px" }}>
-        <Grid xs={12} style={{ textAlign: "end" }}>
-        <Button
-            style={{ margin: "0 0 0 0px", width: "80px" , alignItems:"right"}}
-            color="primary"
-            variant="contained"
-            type="submit"
-            onClick={() => backtopage()}
-          >
-            Back
-          </Button>
+          <Grid xs={12} style={{ textAlign: "end" }}>
+            <Button
+              style={{ margin: "0 0 0 0px", width: "80px", alignItems: "right" }}
+              color="primary"
+              variant="contained"
+              type="submit"
+              onClick={() => backtopage()}
+            >
+              Back
+            </Button>
           </Grid>
-        
+
           <Grid xs={12} style={{ textAlign: "center" }}>
             <h1>View Post</h1>
           </Grid>
           <Grid item xs={4}>
-            <div><img src={"http://localhost:3000/" + user?.image} width="100%" height="30%" alt="" srcset="" /></div>
+            <div>{user?.image ? <img src={"http://localhost:3000/" + user?.image} width="100%" height="30%" alt="" srcset="" /> :
+              <video
+                src={"http://localhost:3000/" + user?.video}
+                controls
+                height="30%"
+                width="100%"
+              />}
+            </div>
             <div style={{ textAlign: "center", width: "100%", marginTop: 3 }}>
               <div>
-                
+
               </div>
             </div>
           </Grid>
